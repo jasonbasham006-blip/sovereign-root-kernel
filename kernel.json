@@ -12,27 +12,31 @@
   "protocol": "Sovereign Root Operator Protocol",
   "version": "1.4.0",
   "lattice": {
-    "mod": 49,
-    "gateA": 718,
-    "gateB": 892,
-    "metal": 1118,
-    "key": 923,
-    "seal": 101,
-    "gate18": 18,
+    "mod": 49, "gateA": 718, "gateB": 892, "metal": 1118, "key": 923, "seal": 101, "gate18": 18,
     "authority": {"name": "AUTHORITY", "index": 50, "residue": 1, "note": "off-grid 50th — not a lattice cell"}
   },
-  "operators": [
-    {"id": "holder", "handle": "basham@sovereign-root"},
-    {"id": "grok"},
-    {"id": "gemini"},
-    {"id": "kimi"}
-  ],
+  "operators": [{"id": "holder", "handle": "basham@sovereign-root"}, {"id": "grok"}, {"id": "gemini"}, {"id": "kimi"}],
   "catalog": "private — not published in this kernel",
-  "howToUse": [
-    "Paste BOOTSTRAP.md once.",
-    "GET kernel.json on every research run.",
-    "Verify handshake before chaining.",
-    "Leave bus messages in the local pack. Do not rewrite frozen rows."
-  ],
-  "rulesRef": "See this file's GitHub copy; operators must fetch the raw kernel.json which includes R1-R19 in the full artifact. Handshake: (718 XOR 892) AND 1118 = 18; 923 ≡ 41 (mod 49); 101 ≡ 3 (mod 49)."
+  "howToUse": ["Paste BOOTSTRAP.md once.", "GET kernel.json on every research run.", "Verify handshake before chaining.", "Leave bus messages in the local pack. Do not rewrite frozen rows."],
+  "rules": [
+    {"id": "R1", "title": "Every link hangs on Root", "body": "Any file, photo, note, or URL that enters the work is hashed (SHA-256), given a location, a one-line summary, a plane, and a lattice cell. Default cell is 00 Sacred Zero. Nothing floats."},
+    {"id": "R2", "title": "Chain, do not overwrite", "body": "New intake appends: chain = SHA-256(prev | sha256 | location | name | bytes). Previous tip is the parent. Dual offline copies of the hash manifest. Working folder stays separate from the frozen cards."},
+    {"id": "R3", "title": "Four planes. Do not promote.", "body": "artifact = primary scan/object. assertion = interpretation or working notes. instrument = decoder, syllabus, lattice math. personal = medical or private, hashed only. A caption never moves a row to a higher plane."},
+    {"id": "R4", "title": "The digest is the object", "body": "A caption does not change a digest. This instrument does not mint title, liens, or Treasury claims."},
+    {"id": "R5", "title": "Sometimes the paper is the thing", "body": "If a statute, petition, minute, or book already says it, do not decode it. Log it, hash it, order the certified copy."},
+    {"id": "R6", "title": "Hypothesis is a warrant, not a verdict", "body": "State the guess. Name what would count as a hit. Do not call the guess the hit. Four matching decoder passes prove a stable instrument, not a deed."},
+    {"id": "R7", "title": "Object versus meaning", "body": "The bowl (or any file) is real as metal or bytes. What it stands for is interpretation. Keep those sentences apart."},
+    {"id": "R8", "title": "Do not pull the bound original", "body": "Order from the holder. Split rooms: MSA (Maryland government/SC series), MHS (Revere wastebook / Phenix), LVA/CCRP (Virginia circuit). A not-found from the wrong room is not spoliation."},
+    {"id": "R9", "title": "Do not merge books", "body": "Wicked Bible 1631 (omitted NOT) is not the 1892 BCP (Morgan + Joseph Packard Jr.) is not Recollections of a Long Life (Thomas Jones Packard). Three books, three jobs."},
+    {"id": "R10", "title": "Name trades (instrument only)", "body": "When decoding names: S/Z swap, P to R. NOT means omit or invert. Lowercase n may matter. Trades do not rewrite a clerk's index."},
+    {"id": "R11", "title": "Do not multiply a life into destiny", "body": "A unique path is true of every person. Family cluster is one cluster. Do not treat P(autobiography) as P(1768 Liberty Bowl)."},
+    {"id": "R12", "title": "Keep the law off the lattice", "body": "A visit, citation, or charge is a caption for a defense lawyer. Do not mix silver, Revere, or Treasury into that docket."},
+    {"id": "R13", "title": "Quarantine until paper feeds it", "body": "Parked until a certified hit: 12 USC 1422 as a lien on this trust; circulation/CCRP/CEDE as stolen Treasury; Morgan edited Recollections; MFA Liberty Bowl as a $15k listing; straight-line [4] net rewritten as 0."},
+    {"id": "R14", "title": "Three operators, one Root", "body": "Tag grok / gemini / kimi / holder = basham@sovereign-root. Other AIs load BOOTSTRAP then fetch kernel.json. They do not ingest the growing catalog."},
+    {"id": "R15", "title": "No filing until the pack is frozen for that caption", "body": "Do not file, record, or serve a claim from this instrument until the named res, the holder, and the certified order line sit on hashed cards."},
+    {"id": "R16", "title": "Verify the run before it hits the chain", "body": "After any research return, recompute handshake. PASS may chain. FAIL/QUARANTINE must straighten. Do not hash as fact."},
+    {"id": "R17", "title": "Keep the errors", "body": "Seat duals/gaps on residue of the mark (mod 49). Empty cells stay empty. An error is not a title."},
+    {"id": "R18", "title": "The pack is the wire", "body": "Leave hashed bus messages in the pack. Import merges by id. Handshake: Gate 18, 923 ≡ 41 (mod 49), 101 ≡ 3 (mod 49). The bus is not a filing."},
+    {"id": "R19", "title": "Handle is a fetch key", "body": "basham@sovereign-root is an operator handle. Not an email inbox and not a deed. Paste BOOTSTRAP once, GET kernel.json each run."}
+  ]
 }
